@@ -1,0 +1,159 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nfts",
+  "info": {
+    "name": "nft",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "unique_id": {
+      "type": "string",
+      "required": false
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "art",
+        "music",
+        "domain_names",
+        "virtual_world",
+        "trading_cards",
+        "collectibles",
+        "sports",
+        "utility"
+      ],
+      "default": "art"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "buy_now",
+        "on_auction",
+        "has_offers"
+      ],
+      "default": "buy_now"
+    },
+    "item_type": {
+      "type": "enumeration",
+      "enum": [
+        "single_items",
+        "bundles"
+      ],
+      "default": "single_items"
+    },
+    "collections": {
+      "type": "enumeration",
+      "enum": [
+        "abstraction",
+        "patternlicious",
+        "skecthify",
+        "cartoonism",
+        "virtuland",
+        "papercut"
+      ],
+      "default": "abstraction"
+    },
+    "author_link": {
+      "type": "string",
+      "default": "/Author"
+    },
+    "nft_link": {
+      "type": "string",
+      "default": "/ItemDetail"
+    },
+    "bid_link": {
+      "type": "string",
+      "default": "/ItemDetail"
+    },
+    "preview_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal",
+      "default": 0
+    },
+    "bid": {
+      "type": "integer",
+      "default": 1
+    },
+    "max_bid": {
+      "type": "integer",
+      "default": 1
+    },
+    "likes": {
+      "type": "integer",
+      "default": 1
+    },
+    "description": {
+      "type": "text"
+    },
+    "views": {
+      "type": "integer",
+      "default": 0
+    },
+    "bids": {
+      "via": "nft",
+      "collection": "bid"
+    },
+    "priceover": {
+      "type": "float",
+      "default": 0
+    },
+    "author": {
+      "via": "nfts",
+      "model": "author"
+    },
+    "showcase": {
+      "type": "boolean",
+      "default": false
+    },
+    "token_type": {
+      "type": "enumeration",
+      "enum": [
+        "BNB",
+        "SPC"
+      ],
+      "default": "BNB"
+    },
+    "situation": {
+      "type": "enumeration",
+      "enum": [
+        "minted",
+        "canceled",
+        "saled"
+      ],
+      "default": "minted"
+    },
+    "royalties": {
+      "type": "decimal",
+      "default": 10
+    },
+    "end_date": {
+      "type": "integer"
+    },
+    "token_uri": {
+      "type": "string"
+    },
+    "creator": {
+      "model": "author"
+    }
+  }
+}

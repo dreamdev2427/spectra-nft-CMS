@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activities",
+  "info": {
+    "name": "Activity",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at"
+    ],
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "price": {
+      "type": "float"
+    },
+    "from": {
+      "type": "string"
+    },
+    "to": {
+      "type": "string"
+    },
+    "nft": {
+      "type": "string"
+    },
+    "token_type": {
+      "type": "enumeration",
+      "enum": [
+        "BNB",
+        "SPC"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "MINT",
+        "BUY",
+        "SELL",
+        "RESELL",
+        "BID",
+        "CANCEL"
+      ]
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors",
+  "info": {
+    "name": "author",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "username": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "banner": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "wallet": {
+      "type": "string",
+      "required": true
+    },
+    "followers": {
+      "type": "integer",
+      "default": 0
+    },
+    "nfts": {
+      "via": "author",
+      "collection": "nft"
+    },
+    "author_sale": {
+      "model": "author-sales"
+    },
+    "about": {
+      "type": "text"
+    },
+    "minting_fee": {
+      "type": "decimal",
+      "default": 0
+    },
+    "selling_fee": {
+      "type": "decimal",
+      "default": 0
+    },
+    "name": {
+      "type": "string"
+    },
+    "bids": {
+      "via": "author",
+      "collection": "bid"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "gigaland-cms",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@truffle/hdwallet-provider": "^2.0.0",
+    "axios": "^0.24.0",
+    "chart.js": "^3.7.0",
+    "dotenv": "^10.0.0",
+    "react-chartjs-2": "^4.0.0",
+    "react-data-table-component": "^7.4.6",
+    "react-notifications": "^1.7.3",
+    "react-switch": "^6.0.0",
+    "react-table": "^7.7.0",
+    "react-table-css-unit": "^0.1.1",
+    "reactstrap": "^9.0.1",
+    "socket.io": "^4.4.0",
+    "sqlite3": "5.0.0",
+    "strapi": "3.6.8",
+    "strapi-admin": "3.6.8",
+    "strapi-connector-bookshelf": "3.6.8",
+    "strapi-plugin-content-manager": "3.6.8",
+    "strapi-plugin-content-type-builder": "3.6.8",
+    "strapi-plugin-email": "3.6.8",
+    "strapi-plugin-i18n": "3.6.8",
+    "strapi-plugin-upload": "3.6.8",
+    "strapi-plugin-users-permissions": "3.6.8",
+    "strapi-utils": "3.6.8",
+    "styled-components": "^5.3.3",
+    "web3": "^1.6.1",
+    "ws": "^8.4.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "716b54f9-c05e-4c0f-94c2-639c642b7883"
+  },
+  "engines": {
+    "node": ">=10.16.0 <=16.x.x",
+    "npm": "^7.24.0"
+  },
+  "license": "MIT"
+}

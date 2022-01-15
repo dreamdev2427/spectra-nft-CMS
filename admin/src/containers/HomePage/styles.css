@@ -1,0 +1,8 @@
+.Table {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .MuiBackdrop-root {
+    z-index: 10 !important;
+  }
